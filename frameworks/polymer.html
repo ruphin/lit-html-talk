@@ -1,0 +1,20 @@
+
+<dom-module id="fruit-list">
+  <template>
+    <ul>
+      <template is="dom-repeat" items="[[fruits]]">
+        <li>[[item]]</li>
+      </template>
+    </ul>
+  </template>
+  <script>
+    class FruitList extends Polymer.Element {
+      static get is() { return 'fruit-list'; }
+      get fruits() { return ['Apples', 'Oranges', 'Bananas'] }
+    }
+    customElements.define(FruitList.is, FruitList);
+  </script>
+</dom-module>
+
+<fruit-list></fruit-list>
+

@@ -1,0 +1,30 @@
+{
+  "name": "building-a-framework",
+  "description": "A deck for my Building a Framework presentation",
+  "main": "index.html",
+  "repository": "git@github.com:ruphin/building-a-framework.git",
+  "author": "Goffert van Gool",
+  "license": "MIT",
+  "scripts": {
+    "build": "cp src/*.js ./ && rollup -c",
+    "dev": "browser-sync start --config browsersync.config.js",
+    "release": "np",
+    "test": "echo 'No tests!'"
+  },
+  "dependencies": {
+    "@gluon/gluon": "^2.4.1",
+    "@webcomponents/webcomponentsjs": "^2.0.2",
+    "slidem": "^1.2.4",
+    "slidem-codepen-slide": "^0.1.0"
+  },
+  "devDependencies": {
+    "np": "^3.0.4",
+    "browser-sync": "^2.24.4",
+    "rollup": "^0.58.2",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-filesize": "^2.0.0",
+    "rollup-plugin-includepaths": "^0.2.2",
+    "rollup-plugin-uglify": "^3.0.0"
+  },
+  "private": true
+}
