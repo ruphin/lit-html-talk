@@ -40,10 +40,7 @@
   }
 
   :root {
-    /* --code: #272822; */
-    --blue: #2e9be6;
-    --codepen: #1b2b34;
-    --red: rgb(255, 47, 47);
+    --dark: #212121;
 
     --code: #1f2b31;
     --whitecode: #dde0e4;
@@ -53,117 +50,12 @@
     --fadecode: #4c5154;
   }
 
-  .framework-slide img {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+  h2, h3 {
+    font-weight: 500;
   }
 
-  [overlay] {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: scale(2.4) translateX(-20%) translateY(-20%);
-  }
-
-  .framework-name {
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: inline-block;
-    padding: 40px;
-    background: var(--blue);
-    color: white;
-    font-size: 200px;
-  }
-
-  @keyframes slide-left {
-    from {
-      transform: translateX(-300%);
-    }
-
-    to {
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes slide-top {
-    from {
-      transform: translateY(-800%);
-    }
-
-    to {
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes slide-right {
-    from {
-      transform: translateX(300%);
-    }
-
-    to {
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes slide-bottom {
-    from {
-      transform: translateY(800%);
-    }
-
-    to {
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
-  }
-
-  .quiztitle span {
-    display: block;
-    text-align: center;
-    animation-duration: 0.6s;
-    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-    animation-fill-mode: both;
-  }
-
-  .quiztitle span[left] {
-    animation-name: slide-left;
-    animation-delay: 0.3s;
-  }
-
-  .quiztitle span[top] {
-    animation-name: slide-top;
-  }
-
-  .quiztitle span[right] {
-    animation-name: slide-right;
-    animation-delay: 0.6s;
-  }
-
-  .quiztitle span[bottom] {
-    animation-name: slide-bottom;
-    animation-delay: 0.9s;
-  }
-
-  .quiztitle span[fadein] {
-    transform: rotate(-13deg) translateX(60px);
-    display: inline-block;
-    padding: 40px;
-    background: var(--code);
-    animation-name: fade-in;
-    animation-delay: 1.5s;
-    animation-duration: 1s;
-    animation-timing-function: linear;
+  span[strikethrough] {
+    text-decoration: line-through;
   }
 
   .lit-intro-slide {
@@ -200,7 +92,7 @@
 <!-- Load the app on IE11 -->
 <script nomodule src="index.nomodule.js"></script>
 
-<slidem-deck transition="slide-in slide-out" font="Google Sans" loading>
+<slidem-deck font="Google Sans" loading>
   <slidem-slide center slide-out class="lit-intro-slide">
     <div>
       <h1 line-height="2" color="white"><span class="underline">lit</span>-html</h1>
@@ -209,7 +101,67 @@
     </div>
   </slidem-slide>
 
-  <slidem-slide center slide-out background="--code">
+
+  <!-- LIT-HTML IS EFFICIENT -->
+  <slidem-slide center background="white">
+    <div center>
+      <img width="1600px" src="/images/LitGoals.png" />
+    </div>
+  </slidem-slide>
+
+  <slidem-slide fade-in slide-out center background="white">
+    <div center>
+      <img width="1600px" src="/images/Efficient.png" />
+    </div>
+  </slidem-slide>
+
+  <slidem-slide slide-in center background="white">
+    <div center>
+      <img src="/images/endorsement.jpg" />
+    </div>
+  </slidem-slide>
+
+
+
+  <!-- TEMPLATE RENDERING MEME -->
+
+  <slidem-slide center slide-in background="--dark">
+    <h2 center line-height="1.5" color="white">Lit-html is a<br>
+      <span>Templating Library</span><br><br>
+      </h2>
+  </slidem-slide>
+
+  <slidem-slide center fade-in slide-out background="--dark">
+    <h2 center line-height="1.5" color="white">Lit-html is a<br>
+      <span strikethrough>Templating Library</span><br>
+      <span >DOM Rendering Engine</span></h2>
+  </slidem-slide>
+
+
+  <slidem-slide slide-in slide-out center background="--dark">
+    <div center>
+      <img width="1600px" src="/images/profit.jpg" />
+    </div>
+  </slidem-slide>
+
+
+  <!-- VDOM vs LIT-HTML -->
+
+  <slidem-slide center background="white">
+    <div center>
+      <img src="/images/RenderTree.png" />
+    </div>
+  </slidem-slide>
+
+  <slidem-slide fade-in center background="white">
+    <div center>
+      <img src="/images/StaticDynamicTree.png" />
+    </div>
+  </slidem-slide>
+
+
+  <slidem-slide slide-in background="--code">
+    <h3 line-height="3" color="white">JSX</h3>
     <pre class="big code">
 
       <co-de blue c="<h1>"></co-de><co-de c="{ title }"></co-de><co-de blue c="</h1>"></co-de>
@@ -218,7 +170,8 @@
     </pre>
   </slidem-slide>
 
-  <slidem-slide center slide-in slide-out background="--code">
+  <slidem-slide fade-in slide-out background="--code">
+    <h3 line-height="3" color="white">JSX</h3>
     <pre class="code">
       <co-de c="React."></co-de><co-de blue c="createElement"></co-de><co-de c="("></co-de>
         <co-de yellow c='"h1"'></co-de><co-de c=","></co-de>
@@ -233,7 +186,20 @@
     </pre>
   </slidem-slide>
 
-  <slidem-slide center slide-in background="--code">
+  <slidem-slide center background="white">
+    <div center>
+      <img src="/images/LeftTree.png" />
+    </div>
+  </slidem-slide>
+
+  <slidem-slide fade-in center background="white">
+    <div center>
+      <img src="/images/VirtualDOM.png" />
+    </div>
+  </slidem-slide>
+
+  <slidem-slide slide-in background="--code">
+    <h3 line-height="3" color="white">LIT-HTML</h3>
     <pre class="big code">
 
       <co-de blue c="<h1>"></co-de><co-de c="${ title }"></co-de><co-de blue c="</h1>"></co-de>
@@ -241,7 +207,8 @@
       
     </pre>
   </slidem-slide>
-  <slidem-slide center fade-in background="--code">
+  <slidem-slide fade-in slide-out background="--code">
+    <h3 line-height="3" color="white">LIT-HTML</h3>
     <pre class="big code">
 
       <co-de fade c="<h1>"></co-de><co-de c="${ title }"></co-de><co-de fade c="</h1>"></co-de>
@@ -249,7 +216,43 @@
       
     </pre>
   </slidem-slide>
-  <slidem-slide center fade-in background="--code">
+
+  <slidem-slide center background="white">
+    <div center>
+      <img src="/images/RightTree.png" />
+    </div>
+  </slidem-slide>
+
+  <slidem-slide fade-in center background="white">
+    <div center>
+      <img src="/images/Lit.png" />
+    </div>
+  </slidem-slide>
+
+
+  <!-- LIT TEMPLATE EXAMPLE -->
+
+
+  
+  <slidem-slide center slide-in slide-out background="--dark">
+    <h2 center line-height="1.5" color="white">JavaScript<br>
+      <span reveal>Tagged</span><br>
+      <span reveal>Template String</span><br>
+      <span reveal>Literal</span></h2>
+  </slidem-slide>
+
+  <slidem-slide background="--code">
+    <h3 line-height="3" color="white">Tagged Template String Literal</h3>
+    <pre class="big code">
+    <co-de c="html`"></co-de>
+      <co-de blue c="<h1>"></co-de><co-de c="${ title }"></co-de><co-de blue c="</h1>"></co-de>
+      <co-de blue c="<p>"></co-de><co-de c="${ body }"></co-de><co-de blue c="</p>"></co-de>
+    <co-de c="`"></co-de>
+    </pre>
+  </slidem-slide>
+
+  <slidem-slide background="--code">
+    <h3 line-height="3" color="white">Tagged Template String Literal</h3>
     <pre class="big code">
     <co-de c="html`"></co-de>
       <co-de fade c="<h1>"></co-de><co-de fade c="${ title }"></co-de><co-de fade c="</h1>"></co-de>
@@ -257,148 +260,7 @@
     <co-de c="`"></co-de>
     </pre>
   </slidem-slide>
-  <!-- <slidem-polymersummit-slide slide-out>
-    <h2 slot="title">Welcome!</h2>
-    <p reveal slot="subtitle">Frameworkless Frontend</p>
-    <img slot="logo" height="200px" width="200px" src="/images/gluon_logo.svg" />
-    <img slot="avatar" src="/images/avatar.jpg" />
-    <p slot="event">Front End Developers Meetup 2018</p>
-    <p slot="speaker">Goffert van Gool</p>
-    <a slot="email" href="mailto:ruphin@ruphin.net">ruphin@ruphin.net</a>
-    <a slot="twitter" href="https://twitter.com/ruphin_">@ruphin_</a>
-  </slidem-polymersummit-slide>
 
-  <slidem-slide center slide-in slide-out background="--blue">
-    <div center>
-      <h2 font-size="122px" class="quiztitle" line-height="1.2" color="white">
-        <span top>THE GREAT</span>
-        <span left>Frontend</span>
-        <span right>Framework</span>
-        <span bottom>Quiz</span>
-        <span fadein>2018 Edition</span>
-      </h2>
-    </div>
-  </slidem-slide>
-  <slidem-slide class="framework-slide" zoom-out background="--code">
-    <img src="/images/React.png" />
-    <div reveal class="framework-name">React</div>
-  </slidem-slide>
-  <slidem-slide class="framework-slide" slide-in zoom-out background="--code">
-    <img src="/images/jQuery.png" />
-    <div reveal class="framework-name">jQuery</div>
-  </slidem-slide>
-  <slidem-slide class="framework-slide" slide-in zoom-out background="--code" id="disqualifiedSlide">
-    <img src="/images/HTML.png" />
-    <div reveal class="framework-name">HTML</div>
-    <video overlay reveal id="disqualified" poster="//i.imgur.com/VXSxAAEh.jpg" preload="auto" muted="muted" loop="loop" webkit-playsinline>
-      <source src="//i.imgur.com/VXSxAAE.mp4" type="video/mp4" />
-    </video>
-  </slidem-slide>
-  <slidem-slide class="framework-slide" slide-in zoom-out background="--code">
-    <img src="/images/Angular.png" />
-    <div reveal class="framework-name">Angular</div>
-  </slidem-slide>
-  <slidem-slide class="framework-slide" slide-in zoom-out background="--code">
-    <img src="/images/Polymer.png" />
-    <div reveal class="framework-name">Polymer</div>
-  </slidem-slide>
-  <slidem-slide class="framework-slide" slide-in zoom-out background="--code">
-    <img src="/images/Svelte.png" />
-    <div reveal class="framework-name">Svelte</div>
-  </slidem-slide>
-  <slidem-slide class="framework-slide" slide-in zoom-out background="--code">
-    <img src="/images/Vue.png" />
-    <div reveal class="framework-name">Vue</div>
-  </slidem-slide>
-  <slidem-slide class="framework-slide" slide-in background="--code">
-    <img src="/images/Native.png" />
-    <div reveal class="framework-name">Not a Framework</div>
-  </slidem-slide>
-
-  <slidem-slide slide-in slide-out center background="--blue">
-    <h2 font-size="200px" center line-height="1.2" color="white">But it could be...</h2>
-  </slidem-slide>
-  <slidem-slide slide-in slide-out center background="--blue">
-    <h2 font-size="200px" center line-height="1.2" color="white">So lets build it!</h2>
-  </slidem-slide>
-
-  <slidem-slide slide-in slide-out center background="--blue">
-    <h2 font-size="122px" line-height="1.2" color="white">Framework Features</h2>
-    <ul style="margin-left: 60px; margin-bottom: 160px">
-      <li font-size="92px" line-height="1.4" color="white" reveal>Define Components</li>
-      <li font-size="92px" line-height="1.4" color="white" reveal>Render Templates</li>
-    </ul>
-  </slidem-slide>
-  <slidem-slide slide-in slide-out center background="--blue">
-    <h2 font-size="122px" center line-height="1.2" color="white">Step 1</h2>
-    <p font-size="92px" center line-height="1.8" color="white" style="margin-bottom:100px">Define Components</p>
-  </slidem-slide>
-  <slidem-codepen-slide zoom-out background="--codepen" pen="MXqzRZ" tabs="js,result"></slidem-codepen-slide>
-  <slidem-codepen-slide slide-in background="--codepen" pen="XYxWMP" tabs="js,result"></slidem-codepen-slide>
-
-  <slidem-slide slide-in slide-out center background="--blue">
-    <h2 font-size="122px" center line-height="1.2" color="white">Step 2</h2>
-    <p font-size="92px" center line-height="1.8" color="white">Render Templates</p>
-    <p font-size="92px" reveal center line-height="1.1" color="white">(efficiently)</p>
-  </slidem-slide>
-
-  <slidem-codepen-slide zoom-out background="--codepen" pen="XYxqdw" tabs="js,result"></slidem-codepen-slide>
-  <slidem-codepen-slide slide-in zoom-out background="--codepen" pen="NzOMdM" tabs="js,result"></slidem-codepen-slide>
-  <slidem-codepen-slide slide-in zoom-out background="--codepen" pen="yERjGd" tabs="js,result"></slidem-codepen-slide>
-  <slidem-codepen-slide slide-in background="--codepen" pen="qKJKwK" tabs="js,result"></slidem-codepen-slide>
-
-  <slidem-slide slide-in slide-out background="/images/Hyper-github.png"></slidem-slide>
-  <slidem-slide slide-in slide-out background="/images/Lit-github.png"></slidem-slide>
-
-  <slidem-codepen-slide zoom-out background="--codepen" pen="GGwRxJ" tabs="js,result"></slidem-codepen-slide>
-  <slidem-codepen-slide slide-in background="--codepen" pen="QxJWrg" tabs="js,result"></slidem-codepen-slide>
-
-  <slidem-slide slide-in slide-out center background="--blue">
-    <h2 font-size="122px" center line-height="1.2" color="white" style="margin-bottom:100px">Lets put it together</h2>
-  </slidem-slide>
-
-  <slidem-codepen-slide background="--codepen" pen="pKQaPz" tabs="js,result"></slidem-codepen-slide>
-
-  <slidem-slide slide-in slide-out center background="white">
-    <div center>
-      <img height="400px" src="/images/gluon_logoType.svg" />
-    </div>
-  </slidem-slide>
-
-  <slidem-slide
-    class="framework-slide"
-    background="/images/Gluon.png"
-    style="background-color: var(--code); background-size: contain; background-repeat: no-repeat"
-  >
-  </slidem-slide>
-
-  <slidem-slide slide-in slide-out center background="--blue">
-    <h2 font-size="122px" center line-height="1.2" color="white" style="margin-bottom:100px">Is this useful?</h2>
-  </slidem-slide>
-
-  <slidem-slide slide-in slide-out center background="--blue">
-    <h2 font-size="122px" center line-height="1.2" color="white">Production Projects</h2>
-    <p font-size="92px" reveal center line-height="1.4" color="white">
-      <a href="https://daiwallet.ruph.in">Daiwallet</a>
-    </p>
-    <p font-size="92px" reveal center line-height="1.4" color="white">
-      <a href="https://slidem.ruph.in">Slidem</a>
-    </p>
-    <p font-size="92px" reveal center line-height="1.4" color="white">
-      <a href="https://overwebs.ruph.in">Overwebs</a>
-    </p>
-    <p font-size="92px" reveal center line-height="1.4" color="white">
-      <a href="https://rik.chipta.com/en/tickets/event/3015/">Chipta Ticket System</a>
-    </p>
-  </slidem-slide>
-
-  <slidem-slide slide-in slide-out center background="--blue">
-    <h2 font-size="122px" center line-height="1.2" color="white">Thank you!</h2>
-    <p font-size="92px" reveal center line-height="1.8" color="white">ruphin@ruphin.net</p>
-    <p font-size="92px" reveal center line-height="1.1" color="white">
-      <a href="https://github.com/ruphin">https://github.com/ruphin</a>
-    </p>
-  </slidem-slide> -->
 </slidem-deck>
 
 <script>
