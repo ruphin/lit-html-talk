@@ -8,8 +8,8 @@ shell:
 
 .PHONY: build
 build:
-	docker run -it --rm -v $$PWD:/app ruphin/webdev npm run build
+	docker run -it --rm -v $$PWD:/app ruphin/webdev echo "nothing"
 
 .PHONY: production
-production:
-	docker build -t ruphin/slidem .
+production: build
+	docker build -t ruphin/lit-html-talk .
