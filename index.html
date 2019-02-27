@@ -54,8 +54,12 @@
     font-weight: 500;
   }
 
-  span[strikethrough] {
+  [strikethrough] {
     text-decoration: line-through;
+  }
+
+  [underline] {
+    text-decoration: underline;
   }
 
   .lit-intro-slide {
@@ -134,7 +138,7 @@
   <slidem-slide center fade-in slide-out background="--dark">
     <h2 center line-height="1.5" color="white">Lit-html is a<br>
       <span strikethrough>Templating Library</span><br>
-      <span >DOM Rendering Engine</span></h2>
+      <span>DOM Rendering Engine</span></h2>
   </slidem-slide>
 
 
@@ -160,29 +164,29 @@
   </slidem-slide>
 
 
-  <slidem-slide slide-in background="--code">
+  <slidem-slide slide-in background="--dark">
     <h3 line-height="3" color="white">JSX</h3>
     <pre class="big code">
 
-      <co-de blue c="<h1>"></co-de><co-de c="{ title }"></co-de><co-de blue c="</h1>"></co-de>
-      <co-de blue c="<p>"></co-de><co-de c="{ body }"></co-de><co-de blue c="</p>"></co-de>
+    <co-de blue c="<h1>"></co-de><co-de c="{ title }"></co-de><co-de blue c="</h1>"></co-de>
+    <co-de blue c="<p>"></co-de><co-de c="{ body }"></co-de><co-de blue c="</p>"></co-de>
 
     </pre>
   </slidem-slide>
 
-  <slidem-slide fade-in slide-out background="--code">
+  <slidem-slide fade-in slide-out background="--dark">
     <h3 line-height="3" color="white">JSX</h3>
     <pre class="code">
-      <co-de c="React."></co-de><co-de blue c="createElement"></co-de><co-de c="("></co-de>
-        <co-de yellow c='"h1"'></co-de><co-de c=","></co-de>
-        <co-de c="{ __self:"></co-de><co-de pink c=" undefined "></co-de><co-de c="},"></co-de>
-        <co-de c="title"></co-de><co-de c=""></co-de><co-de c=""></co-de><co-de c=""></co-de><co-de c=""></co-de>
-      <co-de c=")"></co-de>
-      <co-de c="React."></co-de><co-de blue c="createElement"></co-de><co-de c="("></co-de>
-        <co-de yellow c='"div"'></co-de><co-de c=","></co-de>
-        <co-de c="{ __self:"></co-de><co-de pink c=" undefined "></co-de><co-de c="},"></co-de></co-de>
-        <co-de c="body"></co-de><co-de c=""></co-de><co-de c=""></co-de><co-de c=""></co-de><co-de c=""></co-de>
-      <co-de c=")"></co-de>
+    <co-de c="React."></co-de><co-de blue c="createElement"></co-de><co-de c="("></co-de>
+      <co-de yellow c='"h1"'></co-de><co-de c=","></co-de>
+      <co-de c="{ __self:"></co-de><co-de pink c=" undefined "></co-de><co-de c="},"></co-de>
+      <co-de c="title"></co-de><co-de c=""></co-de><co-de c=""></co-de><co-de c=""></co-de><co-de c=""></co-de>
+    <co-de c=")"></co-de>
+    <co-de c="React."></co-de><co-de blue c="createElement"></co-de><co-de c="("></co-de>
+      <co-de yellow c='"div"'></co-de><co-de c=","></co-de>
+      <co-de c="{ __self:"></co-de><co-de pink c=" undefined "></co-de><co-de c="},"></co-de></co-de>
+      <co-de c="body"></co-de><co-de c=""></co-de><co-de c=""></co-de><co-de c=""></co-de><co-de c=""></co-de>
+    <co-de c=")"></co-de>
     </pre>
   </slidem-slide>
 
@@ -198,21 +202,21 @@
     </div>
   </slidem-slide>
 
-  <slidem-slide slide-in background="--code">
+  <slidem-slide slide-in background="--dark">
     <h3 line-height="3" color="white">LIT-HTML</h3>
     <pre class="big code">
 
-      <co-de blue c="<h1>"></co-de><co-de c="${ title }"></co-de><co-de blue c="</h1>"></co-de>
-      <co-de blue c="<p>"></co-de><co-de c="${ body }"></co-de><co-de blue c="</p>"></co-de>
+    <co-de blue c="<h1>"></co-de><co-de c="${ title }"></co-de><co-de blue c="</h1>"></co-de>
+    <co-de blue c="<p>"></co-de><co-de c="${ body }"></co-de><co-de blue c="</p>"></co-de>
       
     </pre>
   </slidem-slide>
-  <slidem-slide fade-in slide-out background="--code">
+  <slidem-slide fade-in slide-out background="--dark">
     <h3 line-height="3" color="white">LIT-HTML</h3>
     <pre class="big code">
 
-      <co-de fade c="<h1>"></co-de><co-de c="${ title }"></co-de><co-de fade c="</h1>"></co-de>
-      <co-de fade c="<p>"></co-de><co-de c="${ body }"></co-de><co-de fade c="</p>"></co-de>
+    <co-de fade c="<h1>"></co-de><co-de c="${ title }"></co-de><co-de fade c="</h1>"></co-de>
+    <co-de fade c="<p>"></co-de><co-de c="${ body }"></co-de><co-de fade c="</p>"></co-de>
       
     </pre>
   </slidem-slide>
@@ -230,38 +234,465 @@
   </slidem-slide>
 
 
-  <!-- LIT TEMPLATE EXAMPLE -->
+  <slidem-slide slide-in slide-out center background="--dark">
+    <h2 center line-height="1.5" color="white">Part 1.<br>
+    <span reveal>Templates</span></h2>
+  </slidem-slide>
 
+  <slidem-slide slide-in background="--dark">
+    <h3 line-height="3" color="white">Tagged Template String</h3>
+    <pre class="big code">
+  <co-de c="html`"></co-de>
+    <co-de blue c="<h1>"></co-de><co-de c="${ title }"></co-de><co-de blue c="</h1>"></co-de>
+    <co-de blue c="<p>"></co-de><co-de c="${ body }"></co-de><co-de blue c="</p>"></co-de>
+  <co-de c="`"></co-de>
+    </pre>
+  </slidem-slide>
 
+  <!-- <slidem-slide fade-in background="--code">
+    <h3 line-height="3" color="white">Template String</h3>
+   <pre class="big code">
+
+   <co-de c="`"></co-de><co-de blue c="<h1>"></co-de><co-de c="${ title }"></co-de><co-de blue c="</h1>"></co-de><co-de c="`"></co-de>
+    </pre>
+  </slidem-slide>
+
+  <slidem-slide fade-in background="--code">
+    <h3 line-height="3" color="white">Template String</h3>
+    <pre class="big code">
   
+   <co-de fade c="`"></co-de><co-de blue c="<h1>"></co-de><co-de fade c="${ title }"></co-de><co-de blue c="</h1>"></co-de><co-de fade c="`"></co-de>
+
+    <co-de blue c="Static strings"></co-de>
+    </pre>
+    
+  </slidem-slide>
+
+  <slidem-slide fade-in background="--code">
+    <h3 line-height="3" color="white">Template String</h3>
+    <pre class="big code">
+
+   <co-de fade c="`"></co-de><co-de fade c="<h1>"></co-de><co-de c="${ title }"></co-de><co-de fade c="</h1>"></co-de><co-de fade c="`"></co-de>
+
+    <co-de fade c="Static strings"></co-de>
+    <co-de white c="Dynamic values"></co-de>
+    </pre>
+    
+  </slidem-slide>
+
+  <slidem-slide fade-in background="--code">
+    <h3 line-height="3" color="white">Tagged Template String</h3>
+    <pre class="big code">
+  <co-de c="html`"></co-de>
+    <co-de blue c="<h1>"></co-de><co-de c="${ title }"></co-de><co-de blue c="</h1>"></co-de>
+    <co-de blue c="<p>"></co-de><co-de c="${ body }"></co-de><co-de blue c="</p>"></co-de>
+  <co-de c="`"></co-de>
+    </pre>
+  </slidem-slide> -->
+
+  <slidem-slide fade-in background="--dark">
+    <h3 line-height="3" color="white">Tag Function</h3>
+    <pre class="big code">
+  <co-de underline c="html"></co-de><co-de c="`"></co-de>
+    <co-de fade c="<h1>"></co-de><co-de fade c="${ title }"></co-de><co-de fade c="</h1>"></co-de>
+    <co-de fade c="<p>"></co-de><co-de fade c="${ body }"></co-de><co-de fade c="</p>"></co-de>
+  <co-de c="`"></co-de>
+    </pre>
+  </slidem-slide>
+
+
+
+  <slidem-slide fade-in background="--dark">
+    <h3 line-height="3" color="white">Tag Function</h3>
+    <pre class="big code">
+  <co-de blue c="const "></co-de><co-de c="tag "></co-de><co-de pink c="= "></co-de><co-de blue c="function"></co-de><co-de c="("></co-de><co-de yellow c="strings"></co-de><co-de c=", "></co-de><co-de yellow c="...values"></co-de><co-de c=") {"></co-de>
+    <co-de c="console.log"></co-de><co-de c="(strings, values);"></co-de>
+  <co-de c="}"></co-de>
+    </pre>
+  </slidem-slide>
+
+  <slidem-slide fade-in background="--dark">
+    <h3 line-height="3" color="white">Tag Function</h3>
+    <pre class="big code">
+  <co-de blue c="const "></co-de><co-de c="audience "></co-de><co-de pink c="= "></co-de><co-de yellow c='"world"'></co-de><co-de c=";"></co-de>
+  <co-de c="tag"></co-de><co-de c="`"></co-de><co-de yellow c="Hello "></co-de><co-de pink c="${"></co-de><co-de c=" audience "></co-de><co-de pink c="}"></co-de><co-de c="`;"></co-de>
+  
+  <span reveal><co-de c=">> strings: "></co-de><co-de c="["></co-de><co-de yellow c='"Hello "'></co-de><co-de c=", "></co-de><co-de yellow c='""'></co-de><co-de c="]"></co-de></span>
+  <span reveal><co-de c=">> values: "></co-de><co-de c="["></co-de><co-de yellow c='"world"'></co-de><co-de c="]"></co-de></span>
+    </pre>
+  </slidem-slide>
+
+  <slidem-slide fade-in background="--dark">
+    <h3 line-height="3" color="white">Tag Function</h3>
+    <pre class="big code">
+  <co-de blue c="const "></co-de><co-de c="variable "></co-de><co-de pink c="= "></co-de><co-de c='{ count: '></co-de><co-de pink c='5 '></co-de><co-de  c='}'></co-de><co-de c=";"></co-de>
+  <co-de c="tag"></co-de><co-de c="`"></co-de><co-de yellow c="Hello "></co-de><co-de pink c="${"></co-de><co-de c=" variable "></co-de><co-de pink c="}"></co-de><co-de c="`;"></co-de>
+  
+  <span ><co-de c=">> strings: "></co-de><co-de c="["></co-de><co-de yellow c='"Hello "'></co-de><co-de c=", "></co-de><co-de yellow c='""'></co-de><co-de c="]"></co-de></span>
+  <span ><co-de c=">> values: "></co-de><co-de c="["></co-de><co-de c='{ count: '></co-de><co-de pink c='5 '></co-de><co-de  c='}'></co-de><co-de c="]"></co-de></span>
+    </pre>
+  </slidem-slide>
+
+
+  <slidem-slide background="--dark">
+    <h3 line-height="3" color="white">The lit-html tag</h3>
+    <pre class="code">
+  <co-de blue c="const "></co-de><co-de c="html "></co-de><co-de pink c="= "></co-de><co-de blue c="function"></co-de><co-de c="("></co-de><co-de yellow c="strings"></co-de><co-de c=", "></co-de><co-de yellow c="...values"></co-de><co-de c=") {"></co-de>
+    <co-de pink c="return "></co-de><co-de pink c="new "></co-de><co-de blue underline c="TemplateResult"></co-de><co-de c="(strings, values);"></co-de>
+  <co-de c="}"></co-de>
+
+  <co-de blue c='class '></co-de><co-de blue underline c='TemplateResult'></co-de><co-de c=' {'></co-de>
+    <co-de blue c='constructor'></co-de><co-de c='('></co-de><co-de yellow c='strings'></co-de><co-de c=', '></co-de><co-de yellow c='values'></co-de><co-de c=') {'></co-de>
+      <co-de yellow c="this"></co-de><co-de c=".strings "></co-de><co-de pink c="= "></co-de><co-de c="strings;"></co-de>
+      <co-de yellow c="this"></co-de><co-de c=".values "></co-de><co-de pink c="= "></co-de><co-de c="values;"></co-de>
+    <co-de c="}"></co-de>
+  <co-de c="}"></co-de>
+    </pre>
+  </slidem-slide>
+
+
+  <slidem-slide fade-in background="--dark">
+    <h3 line-height="3" color="white">The lit-html tag</h3>
+    <pre class="code">
+  <co-de blue c="const "></co-de><co-de c="html "></co-de><co-de pink c="= "></co-de><co-de blue c="function"></co-de><co-de c="("></co-de><co-de yellow c="strings"></co-de><co-de c=", "></co-de><co-de yellow c="...values"></co-de><co-de c=") {"></co-de>
+    <co-de pink c="return "></co-de><co-de c="{ strings, values };"></co-de>
+  <co-de c="}"></co-de>
+    </pre>
+  <div reveal>
+    <p line-height="1.8" color="white">Nothing happens!</p>
+    <p line-height="1.8" color="white">It just passes the values along</p>
+  </div>
+  </slidem-slide>
+  
+  <slidem-slide slide-in slide-out background="--code">
+    <h3 line-height="3" color="white">No two-way binding ⚠️</h3>
+    <pre class="big code">
+  <co-de c="html`<"></co-de><co-de pink c="div "></co-de><co-de blue c="attr"></co-de><co-de c="="></co-de><co-de pink c="${ "></co-de><co-de c="variable"></co-de><co-de pink c=" }"></co-de><co-de c=">`"></co-de>
+  
+  <span reveal><co-de c=">> strings: "></co-de><co-de c="["></co-de><co-de yellow c='"<div attr="'></co-de><co-de c=", "></co-de><co-de yellow c='">"'></co-de><co-de c="]"></co-de></span>
+  <span reveal><co-de c=">> values: "></co-de><co-de c="["></co-de><co-de yellow c='<value-of-variable>'></co-de><co-de c="]"></co-de></span>
+  <p reveal line-height="1.8" color="white">No reference to where the value comes from</p>
+    </pre>
+  </slidem-slide>
+
+  <slidem-slide background="--dark">
+    <h3 line-height="3" color="white">Array Equality</h3>
+    <pre class="big code">
+  <co-de c='['></co-de><co-de yellow c='"Test"'></co-de><co-de c='] '></co-de><co-de pink c='=== '></co-de><co-de c='['></co-de><co-de yellow c='"Test"'></co-de><co-de c='];'></co-de>
+
+  <span reveal><co-de c='>> false'></co-de></span>
+    </pre>
+  </slidem-slide>
+
+  <slidem-slide fade-in background="--dark">
+    <h3 line-height="3" color="white">Array Equality</h3>
+    <pre class="big code">
+  <co-de blue c='const '></co-de><co-de c='arr '></co-de><co-de pink c='= '></co-de><co-de c='() '></co-de><co-de blue c='=> '></co-de><co-de c='['></co-de><co-de yellow c='"Test"'></co-de><co-de c='];'></co-de>
+  <co-de c="arr() "></co-de><co-de pink c="=== "></co-de><co-de c="arr();"></co-de>
+
+  <span reveal><co-de c='>> false'></co-de></span>
+    </pre>
+  </slidem-slide>
+
+  <slidem-slide fade-in background="--dark">
+    <h3 line-height="3" color="white">Array Equality</h3>
+    <pre class="big code">
+  <co-de blue c="const "></co-de><co-de c="tag "></co-de><co-de pink c="= "></co-de><co-de blue c="function"></co-de><co-de c="("></co-de><co-de yellow c="strings"></co-de><co-de c=", "></co-de><co-de yellow c="...values"></co-de><co-de c=") {"></co-de>
+    <co-de pink c="return "></co-de><co-de c="strings;"></co-de>
+  <co-de c="}"></co-de>
+
+  <co-de blue c='const '></co-de><co-de c='arr '></co-de><co-de pink c='= '></co-de><co-de c='() '></co-de><co-de blue c='=> '></co-de><co-de c='tag`'></co-de><co-de yellow c='Test'></co-de><co-de c='`;  >> ['></co-de><co-de yellow c='"Test"'></co-de><co-de c=']'></co-de>
+  <co-de c="arr() "></co-de><co-de pink c="=== "></co-de><co-de c="arr();"></co-de>
+
+  <span reveal><co-de c='>> true'></co-de></span>
+    </pre>
+  </slidem-slide>
+    
   <slidem-slide center slide-in slide-out background="--dark">
-    <h2 center line-height="1.5" color="white">JavaScript<br>
-      <span reveal>Tagged</span><br>
-      <span reveal>Template String</span><br>
-      <span reveal>Literal</span></h2>
+    <h2 center line-height="1.5" color="white">Tagged Template Strings<br>
+      preserve Object Equality</h2>
   </slidem-slide>
 
-  <slidem-slide background="--code">
-    <h3 line-height="3" color="white">Tagged Template String Literal</h3>
-    <pre class="big code">
-    <co-de c="html`"></co-de>
-      <co-de blue c="<h1>"></co-de><co-de c="${ title }"></co-de><co-de blue c="</h1>"></co-de>
-      <co-de blue c="<p>"></co-de><co-de c="${ body }"></co-de><co-de blue c="</p>"></co-de>
-    <co-de c="`"></co-de>
+  <slidem-slide background="--dark">
+    <h3 line-height="3" color="white">DOM Templates</h3>
+    <pre class="code">
+  <co-de blue c='const '></co-de><co-de c='templateCache '></co-de><co-de pink c='= new '></co-de><co-de blue underline c='Map'></co-de><co-de c='();'></co-de>
+
+  <co-de fade c='class '></co-de><co-de fade underline c='TemplateResult'></co-de><co-de fade c=' {'></co-de>
+    <co-de fade c='get '></co-de><co-de fade c='template'></co-de><co-de fade c='() {'></co-de>
+      <co-de fade c='let '></co-de><co-de fade c='template '></co-de><co-de fade c='= '></co-de><co-de fade c='templateCache.'></co-de><co-de fade c='get'></co-de><co-de fade c='('></co-de><co-de fade c='this'></co-de><co-de fade c='.strings);'></co-de>
+      <co-de fade c='if '></co-de><co-de fade c='('></co-de><co-de fade c='!'></co-de><co-de fade c='template) {'></co-de>
+        <co-de fade c='template '></co-de><co-de fade c='= '></co-de><co-de fade c='buildTemplate'></co-de><co-de fade c='('></co-de><co-de fade c='this'></co-de><co-de fade c='.strings);'></co-de>
+        <co-de fade c='templateCache.'></co-de><co-de fade c='set'></co-de><co-de fade c='('></co-de><co-de fade c='this'></co-de><co-de fade c='.strings, template);'></co-de>
+      <co-de fade c='}'></co-de>
+      <co-de fade c='return'></co-de><co-de fade c=' template;'></co-de>
+    <co-de fade c='}'></co-de>
+  <co-de fade c='}'></co-de>
     </pre>
   </slidem-slide>
 
-  <slidem-slide background="--code">
-    <h3 line-height="3" color="white">Tagged Template String Literal</h3>
-    <pre class="big code">
-    <co-de c="html`"></co-de>
-      <co-de fade c="<h1>"></co-de><co-de fade c="${ title }"></co-de><co-de fade c="</h1>"></co-de>
-      <co-de fade c="<p>"></co-de><co-de fade c="${ body }"></co-de><co-de fade c="</p>"></co-de>
-    <co-de c="`"></co-de>
+  <slidem-slide fade-in background="--dark">
+    <h3 line-height="3" color="white">DOM Templates</h3>
+    <pre class="code">
+  <co-de fade c='const '></co-de><co-de fade c='templateCache '></co-de><co-de fade c='= new '></co-de><co-de fade underline c='Map'></co-de><co-de fade c='();'></co-de>
+
+  <co-de blue c='class '></co-de><co-de blue underline c='TemplateResult'></co-de><co-de c=' {'></co-de>
+    <co-de c='get '></co-de><co-de blue c='template'></co-de><co-de c='() {'></co-de>
+      <co-de blue c='let '></co-de><co-de c='template '></co-de><co-de pink c='= '></co-de><co-de c='templateCache.'></co-de><co-de blue c='get'></co-de><co-de c='('></co-de><co-de yellow c='this'></co-de><co-de c='.strings);'></co-de>
+      <co-de fade c='if '></co-de><co-de fade c='('></co-de><co-de fade c='!'></co-de><co-de fade c='template) {'></co-de>
+        <co-de fade c='template '></co-de><co-de fade c='= '></co-de><co-de fade c='buildTemplate'></co-de><co-de fade c='('></co-de><co-de fade c='this'></co-de><co-de fade c='.strings);'></co-de>
+        <co-de fade c='templateCache.'></co-de><co-de fade c='set'></co-de><co-de fade c='('></co-de><co-de fade c='this'></co-de><co-de fade c='.strings, template);'></co-de>
+      <co-de fade c='}'></co-de>
+      <co-de pink c='return'></co-de><co-de c=' template;'></co-de>
+    <co-de c='}'></co-de>
+  <co-de c='}'></co-de>
     </pre>
   </slidem-slide>
 
+  <slidem-slide fade-in background="--dark">
+    <h3 line-height="3" color="white">DOM Templates</h3>
+    <pre class="code">
+  <co-de fade c='const '></co-de><co-de fade c='templateCache '></co-de><co-de fade c='= new '></co-de><co-de fade underline c='Map'></co-de><co-de fade c='();'></co-de>
+
+  <co-de fade c='class '></co-de><co-de fade underline c='TemplateResult'></co-de><co-de fade c=' {'></co-de>
+    <co-de fade c='get '></co-de><co-de fade c='template'></co-de><co-de fade c='() {'></co-de>
+      <co-de fade c='let '></co-de><co-de fade c='template '></co-de><co-de fade c='= '></co-de><co-de fade c='templateCache.'></co-de><co-de fade c='get'></co-de><co-de fade c='('></co-de><co-de fade c='this'></co-de><co-de fade c='.strings);'></co-de>
+      <co-de pink c='if '></co-de><co-de c='('></co-de><co-de pink c='!'></co-de><co-de c='template) {'></co-de>
+        <co-de c='template '></co-de><co-de pink c='= '></co-de><co-de blue c='buildTemplate'></co-de><co-de c='('></co-de><co-de yellow c='this'></co-de><co-de c='.strings);'></co-de>
+        <co-de c='templateCache.'></co-de><co-de blue c='set'></co-de><co-de c='('></co-de><co-de yellow c='this'></co-de><co-de c='.strings, template);'></co-de>
+      <co-de c='}'></co-de>
+      <co-de fade c='return'></co-de><co-de fade c=' template;'></co-de>
+    <co-de fade c='}'></co-de>
+  <co-de fade c='}'></co-de>
+    </pre>
+  </slidem-slide>
+
+
+  <slidem-slide fade-in background="--dark">
+    <h3 line-height="3" color="white">DOM Templates</h3>
+    <pre class="code">
+  <co-de blue c='const '></co-de><co-de c='templateCache '></co-de><co-de pink c='= new '></co-de><co-de blue underline c='Map'></co-de><co-de c='();'></co-de>
+
+  <co-de blue c='class '></co-de><co-de blue underline c='TemplateResult'></co-de><co-de c=' {'></co-de>
+    <co-de c='get '></co-de><co-de blue c='template'></co-de><co-de c='() {'></co-de>
+      <co-de blue c='let '></co-de><co-de c='template '></co-de><co-de pink c='= '></co-de><co-de c='templateCache.'></co-de><co-de blue c='get'></co-de><co-de c='('></co-de><co-de yellow c='this'></co-de><co-de c='.strings);'></co-de>
+      <co-de pink c='if '></co-de><co-de c='('></co-de><co-de pink c='!'></co-de><co-de c='template) {'></co-de>
+        <co-de c='template '></co-de><co-de pink c='= '></co-de><co-de blue c='buildTemplate'></co-de><co-de c='('></co-de><co-de yellow c='this'></co-de><co-de c='.strings);'></co-de>
+        <co-de c='templateCache.'></co-de><co-de blue c='set'></co-de><co-de c='('></co-de><co-de yellow c='this'></co-de><co-de c='.strings, template);'></co-de>
+      <co-de c='}'></co-de>
+      <co-de pink c='return'></co-de><co-de c=' template;'></co-de>
+    <co-de c='}'></co-de>
+  <co-de c='}'></co-de>
+    </pre>
+  </slidem-slide>
+
+  <slidem-slide fade-in background="--dark">
+    <h3 line-height="3" color="white">DOM Templates</h3>
+    <pre class="code">
+  <co-de blue c='function '></co-de><co-de blue underline c='buildTemplate'></co-de><co-de c='('></co-de><co-de yellow c='strings'></co-de><co-de c=') {'></co-de>
+    <co-de blue c='const '></co-de><co-de c='template '></co-de><co-de pink c='= '></co-de><co-de c='document.'></co-de><co-de blue c='createElement'></co-de><co-de c='('></co-de><co-de yellow c='"template"'></co-de><co-de c=');'></co-de>
+    <co-de c='template.innerHTML '></co-de><co-de pink c='= '></co-de><co-de c='strings.'></co-de><co-de blue c='join'></co-de><co-de c='('></co-de><co-de yellow c='"{{marker}}"'></co-de><co-de c=');'></co-de>
+    <co-de pink c='return '></co-de><co-de c='template;'></co-de>
+  <co-de c='}'></co-de>
+  </pre>
+  </slidem-slide>
+
+
+
+  <slidem-slide fade-in slide-out background="--dark">
+    <h3 line-height="3" color="white">DOM Templates</h3>
+    <pre class="code big">
+  <co-de c="html`<"></co-de><co-de pink c="div "></co-de><co-de blue c="attr"></co-de><co-de c="="></co-de><co-de pink c="${ "></co-de><co-de yellow c="value"></co-de><co-de pink c=" }"></co-de><co-de c=">"></co-de><co-de pink c="${ "></co-de><co-de yellow c="value"></co-de><co-de pink c=" }"></co-de><co-de c="</"></co-de><co-de pink c="div"></co-de><co-de c=">`"></co-de>
+    </pre>
+    <div reveal><p color="white">Becomes</p>
+    <pre class="code big">
+  <co-de c="<"></co-de><co-de pink c="div "></co-de><co-de blue c="attr"></co-de><co-de c="="></co-de><co-de yellow c='"{{marker}}"'></co-de><co-de c=">"></co-de>
+    <co-de yellow c="<!-- {{marker}} -->"></co-de>
+  <co-de c="</"></co-de><co-de pink c="div"></co-de><co-de c=">"></co-de>
+    </pre></div>
+  </slidem-slide>
+
+  <slidem-slide center background="white">
+    <div center>
+      <img src="/images/RenderTree.png" />
+    </div>
+  </slidem-slide>
+
+  <slidem-slide fade-in center background="white">
+    <div center>
+      <img src="/images/MarkedTree.png" />
+    </div>
+  </slidem-slide>
+
+  <slidem-slide slide-in background="--code">
+    <h3 line-height="3" color="white">Only Nodes and Attribute values can be dynamic ⚠️</h3>
+    <pre class="code big">
+  <co-de c="html`<"></co-de><co-de pink c="${ "></co-de><co-de yellow c='"my-element"'></co-de><co-de pink c=" }"></co-de><co-de c=">"></co-de><co-de c="`"></co-de>
+    </pre>
+    <div reveal><p color="white">?</p>
+    <pre class="code big">
+  <co-de c="<"></co-de><co-de pink c="{{marker}}"></co-de><co-de c=">"></co-de>
+    </pre></div>
+  </slidem-slide>
+
+  <slidem-slide fade-in slide-out background="--code">
+    <h3 line-height="3" color="white">Only Nodes and Attribute values can be dynamic ⚠️</h3>
+    <pre class="code big">
+  <co-de c="html`<"></co-de><co-de pink c="div ${ "></co-de><co-de yellow c='"color=red"'></co-de><co-de pink c=" }"></co-de><co-de c=">"></co-de><co-de c="`"></co-de>
+    </pre>
+    <div reveal><p color="white">?</p>
+    <pre class="code big">
+  <co-de c="<"></co-de><co-de pink c="div "></co-de><co-de c="{{marker}}>"></co-de>
+    </pre></div>
+  </slidem-slide>
+
+  <slidem-slide slide-out center background="--dark">
+    <h2 center line-height="1.5" color="white">Part 2.<br>
+    <span reveal>Parts</span></h2>
+  </slidem-slide>
+
+  <slidem-slide center background="white">
+    <div center>
+      <img src="/images/RenderTree.png" />
+    </div>
+  </slidem-slide>
+
+  <slidem-slide fade-in center background="white">
+    <div center>
+      <img src="/images/NumberedTree.png" />
+    </div>
+  </slidem-slide>
+
+  <slidem-slide fade-in center background="white">
+    <div center>
+      <img src="/images/CircledNumberedTree.png" />
+    </div>
+  </slidem-slide>
+
+  <slidem-slide slide-in background="--dark">
+    <h3 line-height="3" color="white">Parts</h3>
+    <pre class="code big">
+  <co-de blue c='class '></co-de><co-de blue underline c='NodePart'></co-de><co-de c=' {'></co-de>
+    <co-de blue c='constructor'></co-de><co-de c='('></co-de><co-de yellow c='node'></co-de><co-de c=') {'></co-de>
+      <co-de yellow c='this'></co-de><co-de c='.node '></co-de><co-de pink c='= '></co-de><co-de c='node;'></co-de>
+    <co-de c='}'></co-de>
+  <co-de c='}'></co-de>
+    </pre>
+  </slidem-slide>
+
+  <slidem-slide fade-in background="--dark">
+    <h3 line-height="3" color="white">Parts</h3>
+    <pre class="code big">
+  <co-de blue c='class '></co-de><co-de blue underline c='AttributePart'></co-de><co-de c=' {'></co-de>
+    <co-de blue c='constructor'></co-de><co-de c='('></co-de><co-de yellow c='node'></co-de><co-de c=', '></co-de><co-de yellow c='attribute'></co-de><co-de c=') {'></co-de>
+      <co-de yellow c='this'></co-de><co-de c='.node '></co-de><co-de pink c='= '></co-de><co-de c='node;'></co-de>
+      <co-de yellow c='this'></co-de><co-de c='.attribute '></co-de><co-de pink c='= '></co-de><co-de c='attribute;'></co-de>
+    <co-de c='}'></co-de>
+  <co-de c='}'></co-de>
+    </pre>
+  </slidem-slide>
+
+  <slidem-slide fade-in background="--dark">
+    <h3 line-height="3" color="white">Parts</h3>
+    <pre class="code big">
+  <co-de blue c='class '></co-de><co-de blue underline c='Part'></co-de><co-de c=' {'></co-de>
+    <co-de blue c='render'></co-de><co-de c='('></co-de><co-de yellow c='value'></co-de><co-de c=') {'></co-de>
+      <co-de c='...change DOM'></co-de>
+    <co-de c='}'></co-de>
+  <co-de c='}'></co-de>
+    </pre>
+  </slidem-slide>
+
+  <slidem-slide fade-in background="--dark">
+    <h3 line-height="3" color="white">Parts</h3>
+    <pre class="code big">
+  <co-de blue c='class '></co-de><co-de blue underline c='AttributePart'></co-de><co-de c=' {'></co-de>
+    <co-de blue c='render'></co-de><co-de c='('></co-de><co-de yellow c='value'></co-de><co-de c=') {'></co-de>
+      <co-de yellow c='this'></co-de><co-de c='.node.'></co-de><co-de blue c='setAttribute'></co-de><co-de c='('></co-de>
+        <co-de yellow c='this'></co-de><co-de c='.attribute'></co-de><co-de c=', '></co-de><co-de yellow c='value'></co-de>
+      <co-de c=')'></co-de>
+    <co-de c='}'></co-de>
+  <co-de c='}'></co-de>
+    </pre>
+  </slidem-slide>
+
+  <slidem-slide fade-in background="--dark">
+    <h3 line-height="3" color="white">Parts</h3>
+    <pre class="code big">
+  <co-de blue c='class '></co-de><co-de blue underline c='NodePart'></co-de><co-de c=' {'></co-de>
+    <co-de blue c='render'></co-de><co-de c='('></co-de><co-de yellow c='value'></co-de><co-de c=') {'></co-de>
+      <co-de pink c='if '></co-de><co-de c='('></co-de><co-de pink c='typeof '></co-de><co-de c='value '></co-de><co-de pink c='=== '></co-de><co-de yellow c='"string"'></co-de><co-de c=') {'></co-de>
+        <co-de yellow c='this'></co-de><co-de c='.node.'></co-de><co-de blue c='textContent '></co-de><co-de pink c='= '></co-de><co-de c='value'></co-de><co-de c=';'></co-de>
+      <co-de c='}'></co-de>
+    <co-de c='}'></co-de>
+  <co-de c='}'></co-de>
+    </pre>
+  </slidem-slide>
+
+  <slidem-slide fade-in background="--dark">
+    <h3 line-height="3" color="white">Parts</h3>
+    <pre class="code big">
+  <co-de blue c='class '></co-de><co-de blue underline c='NodePart'></co-de><co-de c=' {'></co-de>
+    <co-de blue c='render'></co-de><co-de c='('></co-de><co-de yellow c='value'></co-de><co-de c=') {'></co-de>
+      <co-de pink c='if '></co-de><co-de c='('></co-de><co-de c='value '></co-de><co-de pink c='instanceof '></co-de><co-de blue underline c='TemplateResult'></co-de><co-de c=') {'></co-de>
+        <span reveal><co-de yellow c='this'></co-de><co-de c='.node.'></co-de><co-de blue c='appendChild'></co-de><co-de c='(value.template);'></co-de></span>
+        <span reveal><co-de blue c='let '></co-de><co-de c='parts '></co-de><co-de pink c='= '></co-de><co-de blue c='createParts'></co-de><co-de c='(value.template);'></co-de></span>
+        <span reveal><co-de c='parts.'></co-de><co-de blue c='render'></co-de><co-de c='(value.values);'></co-de></span>
+      <co-de c='}'></co-de>
+    <co-de c='}'></co-de>              <span reveal>(pseudocode)</span>
+  <co-de c='}'></co-de>
+    </pre>
+  </slidem-slide>
+
+
+  <slidem-slide slide-in slide-out center background="--dark">
+    <h2 center line-height="1.5" color="white">Parts render everything</h2>
+  </slidem-slide>
+
+  <slidem-slide slide-in slide-out center background="--dark">
+    <h2 center line-height="1.5" color="white">What about <pre class="code big"><co-de blue c="render"></co-de>()</pre></h2>
+  </slidem-slide>
+
+
+  <slidem-slide background="--dark">
+    <h3 line-height="3" color="white">Render()</h3>
+    <pre class="code big">
+  <co-de blue c='const '></co-de><co-de c='render '></co-de><co-de pink c='= '></co-de><co-de blue c='function'></co-de><co-de c='('></co-de><co-de yellow c='something'></co-de><co-de c=', '></co-de><co-de yellow c='somewhere'></co-de><co-de c=') {'></co-de>
+    <span reveal><co-de c='somewhere.part '></co-de><co-de pink c='= '></co-de><co-de yellow c='new '></co-de><co-de blue c='NodePart'></co-de><co-de c='(somewhere);'></co-de></span>
+    <span reveal><co-de c='somewhere.part.'></co-de><co-de blue c='render'></co-de><co-de c='(something);'></co-de></span>
+  <co-de c='}'></co-de>
+    </pre>
+  </slidem-slide>
+
+  <slidem-slide slide-in slide-out center background="--dark">
+    <h2 center line-height="1.5" color="white">Everything together</h2>
+  </slidem-slide>
+
+  <slidem-slide background="--dark">
+    <h3 line-height="3" color="white">Everything together</h3>
+    <pre class="code">
+  <co-de blue c='render'></co-de><co-de c='(html`<'></co-de><co-de pink c='p'></co-de><co-de c='>'></co-de><co-de pink c='${ '></co-de><co-de c='message '></co-de><co-de pink c='}'></co-de><co-de c='</'></co-de><co-de pink c='p'></co-de><co-de c='>`, document.body)'></co-de>
+  
+  <span reveal>· Create a new TemplateResult</span>
+  <span reveal>· Create a NodePart in document.body</span>
+  <span reveal>· Render the TemplateResult in that Part</span>
+  <span reveal> - Prepare a new DOM Template</span>
+  <span reveal>  · Create DOM Template from the Strings Array with {{marker}} nodes</span>
+  <span reveal>  · Remember the positions of {{markers}} in the Template</span>
+  <span reveal> - Clone the Template</span>
+  <span reveal> - Create Parts for every {{marker}} position</span>
+  <span reveal> - Render the values inside the Parts</span>
+    <span reveal> · Repeat all the way down</span>
+    </pre>
+  </slidem-slide>
+  
+  <slidem-slide slide-in slide-out center background="--dark">
+    <h2 center line-height="3" color="white">Thank you</h2>
+    <p reveal center line-height="2" color="white">https://lit-talk.ruph.in/</p>
+    <p reveal center line-height="2" color="white">https://github.com/ruphin/lite-html</p>
+  </slidem-slide>
 </slidem-deck>
+
 
 <script>
   class InlineCode extends HTMLElement {

@@ -1,8 +1,8 @@
 {
-  "name": "building-a-framework",
-  "description": "A deck for my Building a Framework presentation",
+  "name": "lit-html-talk",
+  "description": "A deck for my lit-html talk",
   "main": "index.html",
-  "repository": "git@github.com:ruphin/building-a-framework.git",
+  "repository": "git@github.com:ruphin/lit-html-talk.git",
   "author": "Goffert van Gool",
   "license": "MIT",
   "scripts": {
