@@ -1,23 +1,21 @@
 {
   "name": "lit-html-talk",
   "description": "A deck for my lit-html talk",
-  "main": "index.html",
+  "type": "module",
   "repository": "git@github.com:ruphin/lit-html-talk.git",
   "author": "Goffert van Gool",
   "license": "MIT",
   "scripts": {
-    "build": "cp src/*.js ./ && rollup -c",
-    "dev": "browser-sync start --config browsersync.config.js",
-    "release": "np",
-    "test": "echo 'No tests!'"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.2.7",
     "slidem": "^1.2.7"
   },
   "devDependencies": {
-    "np": "^3.0.4",
-    "browser-sync": "^2.24.4"
+    "vite": "^8.3.3"
   },
   "private": true
 }
